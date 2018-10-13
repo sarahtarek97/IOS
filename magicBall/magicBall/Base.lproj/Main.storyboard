@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="magicBall" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Q3-lE-8YV" userLabel="middleView">
+                                <rect key="frame" x="-20" y="148" width="415" height="371"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ball0" translatesAutoresizingMaskIntoConstraints="NO" id="ZK7-TP-0mD">
+                                        <rect key="frame" x="0.0" y="0.0" width="414.66666666666663" height="371"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="371" id="0i2-Lv-mZr"/>
+                                    <constraint firstAttribute="width" constant="414.67000000000002" id="oQi-42-SAC"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MTx-Xe-Hu5" userLabel="topView">
+                                <rect key="frame" x="0.0" y="20" width="375" height="128"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ask Me Anything..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WCZ-3o-2ja">
+                                        <rect key="frame" x="0.0" y="26" width="375" height="76"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="76" id="axE-EQ-zUH"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="40"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="WCZ-3o-2ja" firstAttribute="centerX" secondItem="MTx-Xe-Hu5" secondAttribute="centerX" id="X8I-XA-8ic"/>
+                                    <constraint firstAttribute="trailing" secondItem="WCZ-3o-2ja" secondAttribute="trailing" id="cTj-ux-FAo"/>
+                                    <constraint firstItem="WCZ-3o-2ja" firstAttribute="leading" secondItem="MTx-Xe-Hu5" secondAttribute="leading" id="u9r-gg-vQJ"/>
+                                    <constraint firstItem="WCZ-3o-2ja" firstAttribute="centerY" secondItem="MTx-Xe-Hu5" secondAttribute="centerY" id="vmL-ae-sSV"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lsy-eK-LXy" userLabel="buttomView">
+                                <rect key="frame" x="0.0" y="519" width="375" height="148"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CZI-qU-Otj">
+                                        <rect key="frame" x="0.0" y="43.5" width="375" height="61"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="61" id="MAj-Sq-o6b"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="40"/>
+                                        <state key="normal" title="Ask"/>
+                                        <connections>
+                                            <action selector="askBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="43t-0s-lcx"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="CZI-qU-Otj" firstAttribute="centerY" secondItem="Lsy-eK-LXy" secondAttribute="centerY" id="T3F-lM-hES"/>
+                                    <constraint firstItem="CZI-qU-Otj" firstAttribute="leading" secondItem="Lsy-eK-LXy" secondAttribute="leading" id="Trh-3b-KlI"/>
+                                    <constraint firstAttribute="trailing" secondItem="CZI-qU-Otj" secondAttribute="trailing" id="gl1-h3-rd8"/>
+                                    <constraint firstItem="CZI-qU-Otj" firstAttribute="centerX" secondItem="Lsy-eK-LXy" secondAttribute="centerX" id="hU8-EE-3Fl"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.35686274509999999" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Lsy-eK-LXy" secondAttribute="bottom" id="L3M-hk-CNs"/>
+                            <constraint firstItem="MTx-Xe-Hu5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="SLu-ec-KF0"/>
+                            <constraint firstItem="Lsy-eK-LXy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="VsK-9j-xjr"/>
+                            <constraint firstItem="7Q3-lE-8YV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZGR-5I-5Jx"/>
+                            <constraint firstAttribute="trailing" secondItem="Lsy-eK-LXy" secondAttribute="trailing" id="cs0-IF-lCg"/>
+                            <constraint firstItem="Lsy-eK-LXy" firstAttribute="top" secondItem="7Q3-lE-8YV" secondAttribute="bottom" id="dXh-pE-CQZ"/>
+                            <constraint firstItem="7Q3-lE-8YV" firstAttribute="top" secondItem="MTx-Xe-Hu5" secondAttribute="bottom" id="evB-NX-eDZ"/>
+                            <constraint firstAttribute="trailing" secondItem="MTx-Xe-Hu5" secondAttribute="trailing" id="ljV-Df-4ag"/>
+                            <constraint firstItem="7Q3-lE-8YV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="xkU-ig-vxv"/>
+                            <constraint firstItem="MTx-Xe-Hu5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="y7o-fM-NyP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ballShaked" destination="ZK7-TP-0mD" id="4gC-U0-2QT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-100" y="122.78860569715144"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ball0" width="460" height="412"/>
+    </resources>
+</document>
